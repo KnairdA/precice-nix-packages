@@ -12,13 +12,13 @@
 
 stdenv.mkDerivation rec {
   pname = "precice-openfoam-adapter";
-  version = "1.2.1";
+  version = "1.3.0";
 
   src = fetchFromGitHub {
     owner = "precice";
     repo = "openfoam-adapter";
     rev = "v${version}";
-    hash = "sha256-+8VfiKIXzWXu2L/hd3IJV56BBWM/Nb73DWv4BTHvBbQ=";
+    hash = "sha256-AWPsokSxt0fvr613AQlm5nR2D3VK0EBJQH5Shgeqerg=";
   };
 
   nativeBuildInputs = [

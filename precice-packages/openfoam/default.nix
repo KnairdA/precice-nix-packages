@@ -12,7 +12,7 @@
 }:
 
 let
-  version = "2206";
+  version = "2312";
 
   # TODO: Can we make the last export to /run/current-system better somehow?
   set-vars-script = writeScript "set-openfoam-vars" ''
@@ -74,7 +74,7 @@ stdenv.mkDerivation rec {
   src = fetchgit {
     url = "https://develop.openfoam.com/Development/openfoam.git";
     rev = "OpenFOAM-v${version}";
-    hash = "sha256-snrFOsENf/siqFd1mzxAsYbw1ba67TXMgaNDpb26uX0=";
+    hash = "sha256-xew1yydA5LFsmelE2d6OTefmTsBHDL0Fn5pT1GcrCmk=";
   };
 
   nativeBuildInputs = [
