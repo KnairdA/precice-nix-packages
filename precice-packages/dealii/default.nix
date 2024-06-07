@@ -23,26 +23,19 @@
   petsc,
   zlib,
   openssh,
+  perl
 }:
 
 stdenv.mkDerivation rec {
   pname = "dealii";
-  version = "9.4.1";
+  version = "9.5.2";
 
   src = fetchFromGitHub {
     owner = "dealii";
     repo = pname;
     rev = "v${version}";
-    hash = "sha256-Kz78U5ud36cTMq4E8FclOsmNsjMZfz+23tRXW/sl498=";
+    hash = "sha256-m2+1HCAkfY6w3QBT4fuz5dm7E3qurvukRf9nI6xyfpY=";
   };
-
-  # we need to limit build cores because otherwise dealii needs to much memory
-  # and garnix runs in an out of memory issue
-  preConfigure = ''
-    if (( $NIX_BUILD_CORES > 8)); then
-      export NIX_BUILD_CORES=8
-    fi
-  '';
 
   nativeBuildInputs = [
     cmake
@@ -59,12 +52,12 @@ stdenv.mkDerivation rec {
     gmsh
     gsl
     scalapack
-    blacs # both are needed
     metis
     hdf5-mpi
     p4est
     petsc
     zlib
+    perl
   ];
 
   cmakeFlags = [

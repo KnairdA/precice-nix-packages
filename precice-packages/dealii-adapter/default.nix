@@ -15,8 +15,8 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "precice";
     repo = "dealii-adapter";
-    rev = "dbb25bea51531b7e4e0c9b5e4def3a7fadf8367c";
-    hash = "sha256-pPQ2YEWiHPI4ph9mK3250TVzsAf9z5uYNae2jlflgUE=";
+    rev = "8ea1e573660a954000fdf272210d9d9ebdf3de96";
+    hash = "sha256-BKQ8j/8vI15/w/T+L3t9GNQauRVzLY1yZ932Ty6XPRs=";
   };
 
   nativeBuildInputs = [ cmake ];
