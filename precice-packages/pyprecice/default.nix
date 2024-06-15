@@ -10,13 +10,13 @@
 
 python3.pkgs.buildPythonPackage rec {
   pname = "pyprecice";
-  version = "2.5.0.2";
+  version = "3.1.0";
 
   src = fetchFromGitHub {
     owner = "precice";
     repo = "python-bindings";
     rev = "v${version}";
-    hash = "sha256-ppDilMwRxVsikTFQMNRYL0G1/HvVomz2S/2yx43u000=";
+    hash = "sha256-5K6oVBhR6mBdkyOb/Ec0qg9x63tkoTnLIrE8dz8oCtc=";
   };
 
   nativeBuildInputs = with python3.pkgs; [
